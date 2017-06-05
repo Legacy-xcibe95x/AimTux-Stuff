@@ -14,11 +14,13 @@ This repository is for Modified AimTux files to easy the use of it
 
 __How do i change the Launcher/Injector Icons?__
 
+Right click and Properties are Powerfull, Try it yourself.
 
 __Why My Launcher or Injector opens in Gedit?__
+Because you need to open your `File Explorer` then go to `Edit`, `Preferences`, `Behavior`, And Check `Ask Each Time`
 
 
-__Where i can get AimTux?__
+__Where can i get AimTux?__
 
 [Official AimTux Repository](https://github.com/AimTuxOfficial/AimTux/)
 
