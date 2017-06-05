@@ -1,2 +1,2 @@
 #### Where are the Configs?
-Simply [Click Here](http://) for the Repository.
+Simply [Click Here](https://github.com/xcibe95x/AimTux-Configs.git) for the Repository.
