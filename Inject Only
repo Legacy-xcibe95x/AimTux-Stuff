@@ -1,0 +1,10 @@
+#!/bin/sh  
+
+AimTux='./load'
+Check4Update='./update'
+
+cd ~/AimTux
+$Check4Update
+
+echo cibe | sudo -S $AimTux
+
