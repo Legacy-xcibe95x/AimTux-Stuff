@@ -1,22 +1,24 @@
 #!/bin/sh  
 
+#By Youtube/xcibe95x
+
 AimTux='./load'
 Check4Update='./update'
 CSGO='steam steam://rungameid/730'
 
-echo "xcibe95x - CS:GO Hacked Launcher"  
+echo "xcibe95x - CS:GO AimTux Launcher"  
 
 echo "Be sure You are into Steam and the Game is Up to date."
-sleep 1
++sleep 1
 echo "Launching Counter Strike Global Offensive" & $CSGO
-sleep 2
++sleep 1
 cd ~/AimTux
 
-sleep 5
++sleep 1
 echo "Checking if AimTux is Up-to-date for you."
 $Check4Update
 
-sleep 25
++sleep 1
 echo "Injecting AimTux." 
-echo cibe | sudo -S $AimTux
+echo $USER | sudo -S $AimTux
 
