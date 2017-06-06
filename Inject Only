@@ -1,10 +1,9 @@
 #!/bin/sh  
 
-AimTux='./load'
-Check4Update='./update'
+AimTux='sudo ./load'
+Check4Update='sudo ./update'
 
 cd ~/AimTux
 $Check4Update
 
-echo cibe | sudo -S $AimTux
-
+echo $USER | sudo -S $AimTux
