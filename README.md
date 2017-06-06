@@ -19,6 +19,10 @@ Right click and Properties are Powerfull, Try it yourself.
 __Why My Launcher or Injector opens in Gedit?__
 Because you need to open your `File Explorer` then go to `Edit`, `Preferences`, `Behavior`, And Check `Ask Each Time`
 
+__Not working or Permission Denied?__
+cd Where the files are and Paste these into a terminal or From Properties Allow to run as Application.
+`chmod +x Launcher;chmod +x Injector;chmod +x AimTux Auto Installer`
+
 
 __Where can i get AimTux?__
 
