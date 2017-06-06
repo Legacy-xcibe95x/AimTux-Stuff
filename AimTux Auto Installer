@@ -35,7 +35,7 @@ done
 
 choice2=""
 
-while [ "$choice2" != "q" ]
+while [ "$choice2" != "q" ] 
 do
         echo
         echo "G++ Needs to be updated or it will cause errors during compiling."
