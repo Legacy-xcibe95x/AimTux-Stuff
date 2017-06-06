@@ -9,16 +9,17 @@ CSGO='steam steam://rungameid/730'
 echo "xcibe95x - CS:GO AimTux Launcher"  
 
 echo "Be sure You are into Steam and the Game is Up to date."
-+sleep 1
+
+sleep 1
 echo "Launching Counter Strike Global Offensive" & $CSGO
-+sleep 1
+
+sleep 1
 cd ~/AimTux
 
-+sleep 1
+sleep 5
 echo "Checking if AimTux is Up-to-date for you."
 $Check4Update
 
-+sleep 1
+sleep 10
 echo "Injecting AimTux." 
 echo $USER | sudo -S $AimTux
-
