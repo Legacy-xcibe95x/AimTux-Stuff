@@ -1,22 +1,88 @@
 #!/bin/sh  
 
-AimTux='./load'
-Check4Update='./update'
-CSGO='steam steam://rungameid/730'
 
-echo "xcibe95x - CS:GO Hacked Launcher"  
+echo
+echo
+echo "Welcome to xcibe95x AimTux Auto Installer"
+sleep 3
+echo
+echo
 
-echo "Be sure You are into Steam and the Game is Up to date."
-sleep 1
-echo "Launching Counter Strike Global Offensive" & $CSGO
-sleep 2
-cd ~/AimTux
+ choice=""
 
-sleep 5
-echo "Checking if AimTux is Up-to-date for you."
-$Check4Update
+while [ "$choice" != "q" ]
+do
+        echo
+        echo "Please select your System!"
+        echo "1) Ubuntu-Based / Debian"
+        echo "2) Arch"
+        echo "3) Fedora"
+        echo "4) Gentoo"
+        echo
 
-sleep 25
-echo "Injecting AimTux." 
-echo cibe | sudo -S $AimTux
+        read choice
+
+        case $choice in
+            '1') echo $USER | sudo -S sudo apt-get install cmake g++ gdb git libsdl2-dev zlib1g-dev;;
+            '2') echo $USER | sudo -S sudo pacman -S base-devel cmake gdb git sdl2;;
+            '3') echo $USER | sudo -S sudo dnf install cmake gcc-c++ gdb git libstdc++-static mesa-libGL-devel SDL2-devel zlib-devel;;
+            '4') echo $USER | sudo -S sudo emerge cmake dev-vcs/git gdb libsdl2 mesa;;
+            *)   echo "Invalid Option!";;
+        esac
+break
+done
+
+
+choice2=""
+
+while [ "$choice2" != "q" ]
+do
+        echo
+        echo "G++ Needs to be updated or it will cause errors during compiling."
+        echo
+        echo "1) Auto Update"
+        echo
+        echo "If not on Ubuntu, Please Manually Update."
+        echo
+        echo "2) I've Updated it, Continue"
+        echo
+
+        read choice2
+
+        case $choice2 in
+            '1') echo $USER | sudo -S echo "Updating G++";sudo add-apt-repository ppa:ubuntu-toolchain-r/test;sudo apt-get update;sudo apt-get install gcc-6 g++-6;sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6;;
+            '2') echo;echo;;
+            *)   echo "Invalid Option!";;
+        esac
+break
+done
+
+
+
+
+echo "Cloning AimTux Repository..."
+git clone --recursive https://github.com/AimTuxOfficial/AimTux
+
+cd AimTux
+
+echo 
+echo "Executing Cmake"
+echo
+sudo cmake .
+
+echo
+echo "Compiling AimTux"
+echo
+sudo make -j 4
+
+echo
+echo
+echo All Done! You can now Inject your Hacks.
+exit
+exit
+exit
+
+
+
+
 
