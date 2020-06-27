@@ -1,3 +1,5 @@
+## This repository is no longer supported for obvious reasons, and will remain here for educational purpose
+
 ![banner](http://aimtux.net/images/banner.png)
 
 ## What is AimTux?
